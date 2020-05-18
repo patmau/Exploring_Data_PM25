@@ -9,6 +9,7 @@ scc <- readRDS("Source_Classification_Code.rds")
 motVehicle <- grep("^Mobile - On-Road.*Vehicles$", scc$EI.Sector)
 motCode <- scc[motVehicle, "SCC"]
 
+# subset for Baltimore and Coal combustion
 mot <- subset(pm, pm$SCC %in% motCode & pm$fips == "24510")
 
 melted <- melt(mot, id.vars = "year", measure.vars = "Emissions")
