@@ -1,4 +1,5 @@
 library(reshape2)
+library(ggplot2)
 
 pm <- readRDS("summarySCC_PM25.rds")
 scc <- readRDS("Source_Classification_Code.rds")
